@@ -8,8 +8,14 @@ bot.on('ready', async () =>{
 });
 
 bot.on('message', async (msg) => {
-    if(msg.content == 'bonjour'){
-        msg.channel.send('Salut!')
+    if(msg.content.startsWith(config.prefix) && !msg.author.bot){
+        cmdArray = msg.content.substring(1).split(" ")
+        cmd = cmdArray[0]
+        arg = cmdArray.slice(1)
+
+        if(cmd == 'ping'){
+            msg.channel.send("pong! :joy:")
+        }
     }
 });
 
