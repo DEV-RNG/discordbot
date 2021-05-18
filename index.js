@@ -17,7 +17,7 @@ bot.on('message', async (msg) => {
             msg.channel.send("connect 51.161.116.127:30112")
         }
         if(cmd == 'message'){
-            if(args.lenght < 1)return msg.channel.send("Pas assez d'arguments.")
+            if(args.length < 1)return msg.channel.send("Pas assez d'arguments.")
             var message = ""
             for(let i = 0; i < args.length; i++){
                 message += args[i] + " "
