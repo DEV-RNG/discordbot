@@ -1,12 +1,7 @@
 module.exports.run = async (bot, msg, args) => {
-  if(args.length < 1) return msg.channel.send("Pas assez d'arguments.")
-  var message = ""
-  for(let i = 0; i < args.length; i++){
-      message += args[i] + " "
-   }
-   msg.channel.send("message: " + message)
+    msg.channel.send('connect 51.161.116.127:30112')
 }
 
 module.exports.help = {
-    name: 'message'
+  name: 'ip'
 }
