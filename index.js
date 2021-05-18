@@ -11,7 +11,7 @@ bot.on('message', async (msg) => {
     if(msg.content.startsWith(config.prefix) && !msg.author.bot){
         cmdArray = msg.content.substring(config.prefix.length).split(" ");
         cmd = cmdArray[0];
-        arg = cmdArray.slice(1);
+        args = cmdArray.slice(1);
 
         if(cmd == 'ip'){
             msg.channel.send("connect 51.161.116.127:30112")
