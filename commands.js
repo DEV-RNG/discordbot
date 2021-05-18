@@ -25,9 +25,9 @@ fs.readdir('./commands/', (err, files) => {
     const commandFiles = files.filter(f => f.indexOf('.js') !== -1);
 
     commandFiles.forEach((commandFile) => {
-      const command = require(`./commands/${commandFile}`);
+        const command = require(`./commands/${commandFile}`);
 
-      commands.push(commandFactory));
+        commands.push(commandFactory));
     });
 });
 
