@@ -9,12 +9,12 @@ bot.on('ready', async () =>{
 
 bot.on('message', async (msg) => {
     if(msg.content.startsWith(config.prefix) && !msg.author.bot){
-        cmdArray = msg.content.substring(config.prefix.length).split(" ")
-        cmd = cmdArray[0]
+        cmdArray = msg.content.substring(config.prefix.length).split(" ");
+        cmd = cmdArray[0];
         arg = cmdArray.slice(1);
 
-        if(cmd == 'ping'){
-            msg.channel.send("pong! :joy:")
+        if(cmd == 'ip'){
+            msg.channel.send("connect 51.161.116.127:30112")
         }
         if(cmd == 'message'){
             if(args.lenght < 1)return msg.channel.send("Pas assez d'arguments.")
