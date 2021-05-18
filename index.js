@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client({DisableEveryone: true});
 const config = require('./config.js');
+const commands = require('./commands.js');
 
 bot.on('ready', async () =>{
   console.log('Le bot est lancer');
@@ -13,17 +14,8 @@ bot.on('message', async (msg) => {
         cmd = cmdArray[0]
         args = cmdArray.slice(1)
 
-        if(cmd == 'ping'){
-          msg.channel.send("pong! :joy:")
-        }
-        if( cmd == 'message'){
-          if(args.length < 1) return msg.channel.send("Pas assez d'arguments.")
-          var message = ""
-          for(let i = 0; i < args.length; i++){
-              message += args[i] + ""
-          }
-          msg.channel.send("message: " + message)
-        }
+        let command = commands.getCommand(cmd);
+        if(command != null) command.run(bot, msg, args);
      }
 });
 
