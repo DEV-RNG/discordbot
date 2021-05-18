@@ -16,8 +16,8 @@ const getCommand = (name) => {
 };
 
 const getCommandList = () =>  {
-    return commands.map((command) => command.name).join(', ')
-}
+    return commands.map((command) => command.name).join(', ');
+};
 
 fs.readdir('./commands/', (err, files) => {
     if(err) console.error(err);
@@ -27,8 +27,8 @@ fs.readdir('./commands/', (err, files) => {
     commandFiles.forEach((commandFile) => {
       const command = require(`./commands/${commandFile}`);
 
-      commands.push(command);
-    })
+      commands.push(commandFactory(command));
+    });
 });
 
 module.exports.getCommand = getCommand;
