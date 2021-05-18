@@ -27,7 +27,7 @@ fs.readdir('./commands/', (err, files) => {
     commandFiles.forEach((commandFile) => {
       const command = require(`./commands/${commandFile}`);
 
-      commands.push(commandFactory);
+      commands.push(commandFactory));
     });
 });
 
