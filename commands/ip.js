@@ -3,8 +3,8 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, msg, args) => {
     let hEmbed = new Discord.MessageEmbed()
     .setColor('0047FF')
-    .setTitle('RealLife Bot (F8)')
-    .addField('Direct Connect',
+    .setTitle('RealLife Bot')
+    .addField('Direct Connect (F8)',
     '- connect 51.161.116.127:30112')
     msg.channel.send(hEmbed);
 }
