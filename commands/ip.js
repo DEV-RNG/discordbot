@@ -6,7 +6,7 @@ module.exports.run = async (bot, msg, args) => {
     .setTitle('RealLife Bot')
     .addField('Direct Connect',
     '- connect:.' +
-    '- 51.161.116.127:30112.')
+    '51.161.116.127:30112')
     msg.channel.send(hEmbed);
 }
 
