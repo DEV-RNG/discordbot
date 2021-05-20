@@ -5,7 +5,7 @@ const commands = require('./commands.js');
 
 bot.on('ready', async () =>{
   console.log('Le bot est lancer');
-  bot.user.setActivity('bot tutoriel. Bonjours!');
+  bot.user.setActivity('FrapWorld!');
 });
 
 bot.on('message', async (msg) => {
